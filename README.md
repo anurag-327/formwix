@@ -1,3 +1,8 @@
+![TypeScript](https://img.shields.io/badge/TypeScript-Supported-blue?logo=typescript)
+![npm](https://img.shields.io/npm/v/formwiz)
+![npm](https://img.shields.io/npm/dm/formwiz)
+![License](https://img.shields.io/npm/l/formwiz)
+
 # Formwiz
 
 ![Banner](https://github.com/user-attachments/assets/0be0e51c-6955-4c40-85b7-4f59d39a9dda)
