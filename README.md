@@ -1,7 +1,9 @@
+![Made with love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Supported-blue?logo=typescript)
 ![npm](https://img.shields.io/npm/v/formwiz)
 ![npm](https://img.shields.io/npm/dm/formwiz)
 ![License](https://img.shields.io/npm/l/formwiz)
+
 
 # Formwiz
 
