@@ -1,0 +1,220 @@
+:root {
+  --df-gap: 16px;
+  --df-small-gap: 6px;
+  --df-border-radius: 0.5rem;
+  --df-padding: 8px 12px;
+  --df-border: 1px solid #ccc;
+  --df-focus-border-color: #007bff;
+  --df-error-color: red;
+  --df-label-color: #333;
+  --df-description-color: #666;
+  --df-background-color: white;
+  --df-font-size: 14px;
+  --df-button-padding: 6px 20px;
+  --df-button-radius: 4px;
+  --df-button-color: #007bff;
+  --df-button-hover-color: #0056b3;
+  --color-gray-400:  #9ca3af;
+}
+
+/* Dark Mode */
+.dark {
+  --df-background-color: #1e1e1e;
+  --df-label-color: #f5f5f5;
+  --df-description-color: #bbb;
+  --df-text-color: #e0e0e0;
+  --df-border-color: #444;
+  --df-focus-border-color: #3399ff;
+  --df-error-color: #ff6b6b;
+  --df-button-color: #3399ff;
+  --df-button-hover-color: #1a73e8;
+}
+
+/* Form Container */
+.df-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--df-gap);
+  font-size: var(--df-font-size);
+  width: 100%;
+}
+
+/* Form */
+.df-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  gap: var(--df-gap);
+  flex-direction: column;
+}
+
+/* Field Wrappers */
+.df-field-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--df-small-gap);
+}
+
+.df-field-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.df-field-label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Labels */
+.df-label {
+  font-weight: 500;
+  color: var(--df-label-color);
+}
+
+.df-required-label {
+  color: var(--df-error-color);
+  font-size: 12px;
+}
+
+/* Input Fields */
+.df-text,
+.df-email,
+.df-number,
+.df-date,
+.df-textarea,
+.df-select,
+.df-time,
+.df-url, 
+.df-tel {
+  width: 100%;
+  padding: var(--df-padding);
+  border: var(--df-border);
+  border-radius: var(--df-border-radius);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.df-text:focus,
+.df-email:focus,
+.df-number:focus,
+.df-date:focus,
+.df-textarea:focus,
+.df-select:focus,
+.df-tel:focus,
+.df-url:focus,
+.df-time:focus
+.df-date {
+  border-color: var(--df-focus-border-color);
+}
+
+/* Password Field */
+.df-password-wrapper {
+  display: flex;
+  align-items: center;
+  border: var(--df-border);
+  border-radius: var(--df-border-radius);
+  padding: var(--df-padding);
+  width: 100%;
+  position: relative;
+}
+
+.df-password {
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.df-password-eye-button-wrapper {
+  color:var(--color-gray-400);
+}
+
+.df-password-eye-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Checkbox and Radio */
+.df-multi-select-wrapper,
+.df-radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  width: 100%;
+  gap: var(--df-small-gap);
+}
+
+.df-checkbox,
+.df-radio {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--df-focus-border-color);
+}
+
+.df-multi-select {
+  width: 16px;
+  height: 16px;
+}
+
+/* Select */
+.df-select-options-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.df-radio-options-wrapper, .df-multi-select-options-wrapper, .df-checkbox-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--df-small-gap);
+}
+
+.df-select {
+  appearance: none;
+  background: var(--df-background-color) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23666' d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 10px center;
+  background-size: 16px;
+  padding-right: 30px;
+}
+
+/* Field Description & Error */
+.df-field-description {
+  font-size: 12px;
+  color: var(--df-description-color);
+}
+
+.df-field-error {
+  font-size: 12px;
+  color: var(--df-error-color);
+}
+
+/* Form Actions */
+.df-form-action-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.df-submit-button {
+  padding: var(--df-button-padding);
+  border: none;
+  border-radius: var(--df-button-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: var(--df-button-color);
+  color: white;
+  flex:1;
+}
+
+.df-submit-button:hover {
+  background-color: var(--df-button-hover-color);
+}
+
+.df-form-reset-button {
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 13px;
+  flex:1;
+}
