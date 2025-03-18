@@ -1,6 +1,6 @@
 # Formwiz
 
-![Banner](https://github.com/user-attachments/assets/4bf209f0-01c6-498d-9b8a-67935a3080f0)
+![Banner](https://github.com/user-attachments/assets/0be0e51c-6955-4c40-85b7-4f59d39a9dda)
 
 > Dynamic form generation for React applications
 
