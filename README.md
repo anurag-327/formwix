@@ -1,16 +1,16 @@
 ![Made with love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Supported-blue?logo=typescript)
-![npm](https://img.shields.io/npm/v/formwiz)
-![npm](https://img.shields.io/npm/dm/formwiz)
-![License](https://img.shields.io/npm/l/formwiz)
+![npm](https://img.shields.io/npm/v/formwix)
+![npm](https://img.shields.io/npm/dm/formwix)
+![License](https://img.shields.io/npm/l/formwix)
 
-# Formwiz
+# Formwix
 
 ![Banner](https://github.com/user-attachments/assets/0be0e51c-6955-4c40-85b7-4f59d39a9dda)
 
 > Dynamic form generation for React applications
 
-Formwiz is a powerful React library that enables developers to create dynamic, customizable forms through a simple configuration-based approach. Built on top of `react-hook-form`, Formwiz combines the flexibility of custom form building with robust validation capabilities.
+Formwix is a powerful React library that enables developers to create dynamic, customizable forms through a simple configuration-based approach. Built on top of `react-hook-form`, Formwix combines the flexibility of custom form building with robust validation capabilities.
 
 ## Features
 
@@ -23,22 +23,22 @@ Formwiz is a powerful React library that enables developers to create dynamic, c
 
 ```bash
 # Using npm
-npm install formwiz
+npm install formwix
 
 # Using yarn
-yarn add formwiz
+yarn add formwix
 
 # Using pnpm
-pnpm add formwiz
+pnpm add formwix
 
 ```
 
 ## Quick Start
 
 ```tsx
-import { Formwiz, TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormConfig } from "formwix";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
+import "formwix/dist/formwix.css";
 
 // Define your form fields
 const fields: TypeFieldConfig[] = [
@@ -76,9 +76,9 @@ const config: TypeFormConfig = {
   },
 };
 
-// Use the Formwiz component
+// Use the Formwix component
 export default function LoginForm() {
-  return <Formwiz config={config} />;
+  return <Formwix config={config} />;
 }
 ```
 
@@ -86,7 +86,7 @@ export default function LoginForm() {
 
 ### Form Configuration
 
-Forms in Formwiz are defined using a configuration object that specifies fields, validation rules, and submission behavior.
+Forms in Formwix are defined using a configuration object that specifies fields, validation rules, and submission behavior.
 
 #### TypeFormConfig
 
@@ -119,7 +119,7 @@ Each field in the form is defined using a field configuration object.
 
 ### Validation
 
-Formwiz leverages `react-hook-form` for validation and provides a simple interface to define validation rules.
+Formwix leverages `react-hook-form` for validation and provides a simple interface to define validation rules.
 
 #### TypeValidationRules
 
@@ -134,11 +134,11 @@ Formwiz leverages `react-hook-form` for validation and provides a simple interfa
 
 ## Theming
 
-Formwiz provides a flexible theming system that allows you to customize the appearance of your forms.
+Formwix provides a flexible theming system that allows you to customize the appearance of your forms.
 
 ### Default Theme
 
-Formwiz comes with a default theme that you can override either globally or at the field level.
+Formwix comes with a default theme that you can override either globally or at the field level.
 
 ```tsx
 // Default theme classes
@@ -185,10 +185,10 @@ const defaultTheme = {
 
 ### Custom Theming
 
-To apply custom styles, pass a `theme` object to the `Formwiz` component:
+To apply custom styles, pass a `theme` object to the `Formwix` component:
 
 ```tsx
-<Formwiz
+<Formwix
   config={config}
   theme={{
     email: "border border-gray-300 w-full py-2 px-2 rounded-lg outline-none",
@@ -201,7 +201,7 @@ To apply custom styles, pass a `theme` object to the `Formwiz` component:
 
 #### Global Theming
 
-Apply styles globally by passing a theme object to the `Formwiz` component.
+Apply styles globally by passing a theme object to the `Formwix` component.
 
 #### Field-Level Theming
 
@@ -222,7 +222,7 @@ const fields: TypeFieldConfig[] = [
 
 ## Field Types
 
-Formwiz supports various field types to address different input needs:
+Formwix supports various field types to address different input needs:
 
 | Type             | Description                                 |
 | ---------------- | ------------------------------------------- |
@@ -246,7 +246,7 @@ Formwiz supports various field types to address different input needs:
 ### Login Form
 
 ```tsx
-import { Formwiz, TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormConfig } from "formwix";
 
 const fields: TypeFieldConfig[] = [
   {
@@ -283,14 +283,14 @@ const config: TypeFormConfig = {
 };
 
 export default function LoginForm() {
-  return <Formwiz config={config} />;
+  return <Formwix config={config} />;
 }
 ```
 
 ### Contact Form
 
 ```tsx
-import { Formwiz, TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormConfig } from "formwix";
 
 const fields: TypeFieldConfig[] = [
   {
@@ -356,7 +356,7 @@ const config: TypeFormConfig = {
 };
 
 export default function ContactForm() {
-  return <Formwiz config={config} />;
+  return <Formwix config={config} />;
 }
 ```
 
@@ -364,14 +364,14 @@ export default function ContactForm() {
 
 ### Components
 
-#### Formwiz
+#### Formwix
 
 The main component for generating forms.
 
 ```tsx
-import { Formwiz } from "formwiz";
+import { Formwix } from "formwix";
 
-<Formwiz config={formConfig} theme={customTheme} />;
+<Formwix config={formConfig} theme={customTheme} />;
 ```
 
 ##### Props
@@ -448,10 +448,10 @@ export interface TypeFormUtils {
 You can dynamically generate form fields based on data:
 
 ```tsx
-import { Formwiz, TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormConfig } from "formwix";
 
 function DynamicForm({ schema }) {
-  // Transform schema into Formwiz field configuration
+  // Transform schema into Formwix field configuration
   const fields: TypeFieldConfig[] = schema.map((item) => ({
     type: item.fieldType,
     label: item.label,
@@ -468,17 +468,17 @@ function DynamicForm({ schema }) {
     },
   };
 
-  return <Formwiz config={config} />;
+  return <Formwix config={config} />;
 }
 ```
 
 ### Multi-step Forms
 
-Create multi-step forms by conditionally rendering different Formwiz components:
+Create multi-step forms by conditionally rendering different Formwix components:
 
 ```tsx
 import { useState } from "react";
-import { Formwiz, TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormConfig } from "formwix";
 
 function MultiStepForm() {
   const [step, setStep] = useState(1);
@@ -518,8 +518,8 @@ function MultiStepForm() {
 
   return (
     <div>
-      {step === 1 && <Formwiz config={step1Config} />}
-      {step === 2 && <Formwiz config={step2Config} />}
+      {step === 1 && <Formwix config={step1Config} />}
+      {step === 2 && <Formwix config={step2Config} />}
     </div>
   );
 }
@@ -527,7 +527,7 @@ function MultiStepForm() {
 
 ## Field Type Examples
 
-Below are examples of how to configure each supported field type in Formwiz.
+Below are examples of how to configure each supported field type in Formwix.
 
 ### Text Field
 
@@ -796,8 +796,8 @@ Below are examples of how to configure each supported field type in Formwiz.
 
 For more detailed documentation and examples, visit the following resources:
 
-- [GitHub Repository](https://github.com/anurag-327/formwiz)
-- [Contribution Guidelines](https://github.com/anurag-327/formwiz/blob/main/CONTRIBUTING.md)
+- [GitHub Repository](https://github.com/anurag-327/formwix)
+- [Contribution Guidelines](https://github.com/anurag-327/formwix/blob/main/CONTRIBUTING.md)
 
 ## Contributing
 

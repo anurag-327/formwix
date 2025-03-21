@@ -13,7 +13,7 @@ import { generateZodSchema } from "./schema";
 import Field from "./Field";
 import { defaultTheme } from "./theme";
 
-export default function Formwiz({
+export default function Formwix({
   config,
   theme,
 }: {

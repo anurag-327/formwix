@@ -1,6 +1,6 @@
-# Contributing to Formwiz
+# Contributing to Formwix
 
-Thank you for your interest in contributing to Formwiz! We welcome contributions from everyone, regardless of experience level. This document provides guidelines for contributing to the project.
+Thank you for your interest in contributing to Formwix! We welcome contributions from everyone, regardless of experience level. This document provides guidelines for contributing to the project.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Thank you for your interest in contributing to Formwiz! We welcome contributions
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/anurag-327/formwiz.git`
+2. Clone your fork: `git clone https://github.com/anurag-327/formwix.git`
 3. Install dependencies: `npm install` or `yarn install`
 4. Create a new branch for your changes: `git checkout -b feature/your-feature-name`
 
@@ -38,7 +38,7 @@ Thank you for your interest in contributing to Formwiz! We welcome contributions
 
 ## Adding New Field Types
 
-When adding a new field type to Formwiz:
+When adding a new field type to Formwix:
 
 1. Create a new file in `src/components/fields/` following the existing pattern
 2. Add the field type to `src/components/fields/index.ts`
@@ -71,4 +71,4 @@ For feature requests:
 3. Provide examples of how the API might look
 4. Indicate if you're willing to work on implementing it yourself
 
-Thank you for contributing to Formwiz!
+Thank you for contributing to Formwix!

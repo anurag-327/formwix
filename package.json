@@ -1,9 +1,9 @@
 {
-  "name": "formwiz",
+  "name": "formwix",
   "version": "1.0.0",
   "description": "Config-based form rendering library",
   "type": "module",
-  "module": "dist/formwiz.es.js",
+  "module": "dist/formwix.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/anurag-327/formwiz.git"
+    "url": "https://github.com/anurag-327/formwix.git"
   },
   "sideEffects": false,
   "scripts": {

@@ -15,8 +15,8 @@ export default defineConfig({
     sourcemap: false,
     lib: {
       entry: "src/index.ts",
-      name: "formwiz",
-      fileName: (format) => `formwiz.${format}.js`,
+      name: "formwix",
+      fileName: (format) => `formwix.${format}.js`,
       formats: ["es"],
     },
     rollupOptions: {
