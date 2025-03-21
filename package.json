@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "description": "Config-based form rendering library",
   "type": "module",
-  "main": "dist/formwiz.cjs.js",
   "module": "dist/formwiz.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anurag-327/formwiz.git"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.2",
@@ -29,12 +35,21 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@eslint/js": "^9.22.0",
     "@types/react": "^19.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
-    "cssnano": "^7.0.6",
-    "postcss": "^8.5.3",
-    "postcss-cli": "^11.0.0",
+    "eslint": "^9.22.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.5.3",
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "^5.7.3",
     "vite": "^6.2.0",

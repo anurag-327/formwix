@@ -37,14 +37,14 @@ export default function PasswordField({
             className={clsx(
               theme?.password,
               field.theme?.password,
-              errors[field.name] && "border-red-500"
+              errors[field.name] && "border-red-500",
             )}
           />
           <button
             type="button"
             className={clsx(
               theme.passwordEyeButtonWrapper,
-              field.theme?.passwordEyeButtonWrapper
+              field.theme?.passwordEyeButtonWrapper,
             )}
             onClick={() => setShowPassword(!showPassword)}
           >
@@ -61,7 +61,7 @@ export default function PasswordField({
                 strokeLinejoin="round"
                 className={clsx(
                   theme.passwordEyeCloseButton,
-                  field.theme?.passwordEyeCloseButton
+                  field.theme?.passwordEyeCloseButton,
                 )}
               >
                 <path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49" />
@@ -82,7 +82,7 @@ export default function PasswordField({
                 strokeLinejoin="round"
                 className={clsx(
                   theme.passwordEyeButton,
-                  field.theme?.passwordEyeButton
+                  field.theme?.passwordEyeButton,
                 )}
               >
                 <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />

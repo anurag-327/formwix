@@ -31,7 +31,7 @@ export default function EmailField({
           className={clsx(
             theme?.email,
             field.theme?.email,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}

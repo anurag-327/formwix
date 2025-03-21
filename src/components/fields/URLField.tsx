@@ -31,7 +31,7 @@ export default function URLField({
           className={clsx(
             theme?.url,
             field.theme?.url,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}

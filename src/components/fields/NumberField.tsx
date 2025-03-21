@@ -31,7 +31,7 @@ export default function NumberField({
           className={clsx(
             theme.number,
             field.theme?.number,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}

@@ -12,7 +12,6 @@ Thank you for your interest in contributing to Formwiz! We welcome contributions
 - [Reporting Bugs](#reporting-bugs)
 - [Feature Requests](#feature-requests)
 
-
 ## Getting Started
 
 1. Fork the repository
@@ -33,10 +32,9 @@ Thank you for your interest in contributing to Formwiz! We welcome contributions
 
 1. Ensure your PR description clearly describes the changes you've made
 2. Link any related issues in the PR description using keywords like "Fixes #123" or "Resolves #456"
-4. Wait for a project maintainer to review your PR
-5. Address any feedback or requested changes
-6. Once approved, a maintainer will merge your PR
-
+3. Wait for a project maintainer to review your PR
+4. Address any feedback or requested changes
+5. Once approved, a maintainer will merge your PR
 
 ## Adding New Field Types
 
@@ -53,7 +51,6 @@ When adding a new field type to Formwiz:
 - Update documentation when adding new features or changing existing ones
 - Document props, types, and usage examples
 - Keep the README updated with any significant changes
-
 
 ## Reporting Bugs
 

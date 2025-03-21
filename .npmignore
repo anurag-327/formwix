@@ -1,0 +1,25 @@
+# Ignore source files and build tools
+src/
+tests/
+examples/
+scripts/
+config/
+coverage/
+
+# Ignore TypeScript source files if you are bundling
+*.ts
+
+# Ignore build artifacts and temp files
+*.map
+*.log
+*.lock
+node_modules/
+dist/**/*.d.ts.map  # Ignore TypeScript map files
+
+# Ignore version control and IDE files
+.git/
+.gitignore
+.npmignore
+.vscode/
+.idea/
+*.swp

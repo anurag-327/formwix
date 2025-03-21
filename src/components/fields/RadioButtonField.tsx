@@ -29,7 +29,7 @@ export default function RadioButtonField({
               key={option.value}
               className={clsx(
                 theme.radioOptionsWrapper,
-                field.theme?.radioOptionsWrapper
+                field.theme?.radioOptionsWrapper,
               )}
             >
               <input
@@ -42,7 +42,7 @@ export default function RadioButtonField({
                 className={clsx(
                   theme.radio,
                   field.theme?.radio,
-                  errors[field.name] && "border-red-500"
+                  errors[field.name] && "border-red-500",
                 )}
               />
               <label

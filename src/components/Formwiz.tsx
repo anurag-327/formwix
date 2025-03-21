@@ -23,7 +23,6 @@ export default function Formwiz({
   const styles = { ...defaultTheme, ...theme };
   const {
     control,
-    reset,
     resetField,
     handleSubmit,
     formState: { errors, isSubmitting },
@@ -43,7 +42,7 @@ export default function Formwiz({
   function onSubmit(data: TypeFormData) {
     let hasError = false;
     const multiSelectFields = config.fields.filter(
-      (field) => field.type === "multiselect"
+      (field) => field.type === "multiselect",
     );
     (multiSelectFields as TypeMultiSelectFieldConfig[]).forEach(
       (field: TypeMultiSelectFieldConfig) => {
@@ -59,11 +58,11 @@ export default function Formwiz({
             });
           }
         }
-      }
+      },
     );
 
     const matchingRequiredFields = config.fields.filter(
-      (field) => field.type === "password" && field?.validation?.matchField
+      (field) => field.type === "password" && field?.validation?.matchField,
     );
     (matchingRequiredFields as TypePasswordFieldConfig[]).forEach(
       (field: TypePasswordFieldConfig) => {
@@ -81,7 +80,7 @@ export default function Formwiz({
             });
           }
         }
-      }
+      },
     );
 
     if (hasError) return;
@@ -98,7 +97,7 @@ export default function Formwiz({
             className={clsx(
               styles.fieldContainer,
               field.theme?.fieldContainer,
-              `field-${field.name}`
+              `field-${field.name}`,
             )}
             id={`field-${field.name}`}
           >
@@ -106,7 +105,7 @@ export default function Formwiz({
               <div
                 className={clsx(
                   styles.fieldLabelWrapper,
-                  field.theme?.fieldLabelWrapper
+                  field.theme?.fieldLabelWrapper,
                 )}
               >
                 <label
@@ -119,7 +118,7 @@ export default function Formwiz({
                   <span
                     className={clsx(
                       styles.requiredLabel,
-                      field.theme?.requiredLabel
+                      field.theme?.requiredLabel,
                     )}
                   >
                     *
@@ -131,7 +130,7 @@ export default function Formwiz({
               <p
                 className={clsx(
                   styles.fieldDescription,
-                  field.theme?.fieldDescription
+                  field.theme?.fieldDescription,
                 )}
               >
                 {field.description}

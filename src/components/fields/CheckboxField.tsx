@@ -34,7 +34,7 @@ export default function CheckBoxField({
             className={clsx(
               theme.checkbox,
               field.theme?.checkbox,
-              errors[field.name] && "border-red-500"
+              errors[field.name] && "border-red-500",
             )}
           />
           <label

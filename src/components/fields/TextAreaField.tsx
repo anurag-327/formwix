@@ -31,7 +31,7 @@ export default function TextAreaField({
           className={clsx(
             theme?.textarea,
             field.theme?.textarea,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}

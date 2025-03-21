@@ -15,7 +15,6 @@ interface FieldProps {
 export default function SelectField({
   field,
   control,
-  errors,
   theme = defaultTheme,
 }: FieldProps) {
   return (
@@ -26,7 +25,7 @@ export default function SelectField({
         <div
           className={clsx(
             theme.selectOptionsWrapper,
-            field.theme?.selectOptionsWrapper
+            field.theme?.selectOptionsWrapper,
           )}
         >
           <select

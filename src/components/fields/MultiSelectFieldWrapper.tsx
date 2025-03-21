@@ -15,7 +15,6 @@ interface FieldProps {
 export default function MultiSelectField({
   field,
   control,
-  errors,
   theme = defaultTheme,
 }: FieldProps) {
   return (
@@ -26,7 +25,7 @@ export default function MultiSelectField({
         <div
           className={clsx(
             theme.multiSelectWrapper,
-            field.theme?.multiSelectWrapper
+            field.theme?.multiSelectWrapper,
           )}
         >
           {field.options.map((option) => (
@@ -34,7 +33,7 @@ export default function MultiSelectField({
               key={option.value}
               className={clsx(
                 theme.multiSelectOptionsWrapper,
-                field.theme?.multiSelectOptionsWrapper
+                field.theme?.multiSelectOptionsWrapper,
               )}
             >
               <input

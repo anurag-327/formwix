@@ -33,7 +33,7 @@ export default function TelField({
           className={clsx(
             theme?.tel,
             field.theme?.tel,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}

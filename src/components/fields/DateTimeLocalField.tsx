@@ -51,7 +51,7 @@ export default function DateTimeLocalField({
             className={clsx(
               theme.date,
               field.theme?.date,
-              errors[field.name] && "border-red-500"
+              errors[field.name] && "border-red-500",
             )}
             type={field.type}
             onChange={(e) => onChange(e.target.value)}

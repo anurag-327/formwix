@@ -39,7 +39,7 @@ export default function TimeField({
             className={clsx(
               theme?.time,
               field.theme?.time,
-              errors[field.name] && "border-red-500"
+              errors[field.name] && "border-red-500",
             )}
             type="time"
             onChange={(e) => onChange(e.target.value)}

@@ -31,7 +31,7 @@ export default function TextField({
           className={clsx(
             theme?.text,
             field.theme?.text,
-            errors[field.name] && "border-red-500"
+            errors[field.name] && "border-red-500",
           )}
         />
       )}
