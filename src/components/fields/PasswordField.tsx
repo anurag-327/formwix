@@ -30,6 +30,7 @@ export default function PasswordField({
           <input
             type={showPassword ? "text" : "password"}
             onChange={onChange}
+            disabled={field?.disabled}
             value={value}
             id={field.name}
             placeholder={field.placeholder ?? "Your Answer"}

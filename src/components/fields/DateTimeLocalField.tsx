@@ -47,6 +47,7 @@ export default function DateTimeLocalField({
         return (
           <input
             id={field.name}
+            disabled={field?.disabled}
             className={clsx(
               theme.date,
               field.theme?.date,

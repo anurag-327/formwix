@@ -95,19 +95,6 @@ export const generateZodSchema = (
               "This password is too common. Choose a stronger password"
           );
         }
-
-        // if (field.validation?.matchField) {
-        //   fieldSchema = fieldSchema.refine(
-        //     (val) =>
-        //       field?.validation?.matchField?.field !== undefined &&
-        //       val === formValues[field.validation.matchField.field],
-        //     {
-        //       message:
-        //         field.validation.matchField.message ?? "Passwords do not match",
-        //     }
-        //   );
-        // }
-
         break;
 
       case "number":
@@ -195,21 +182,28 @@ export const generateZodSchema = (
     }
 
     if (field.validation?.pattern?.value) {
-      const patternValue = String(field.validation?.pattern?.value);
-      // Check if the pattern already includes delimiters (like /pattern/)
-      const regexPattern =
-        patternValue.startsWith("/") && patternValue.lastIndexOf("/") > 0
-          ? new RegExp(
-              patternValue.slice(1, patternValue.lastIndexOf("/")),
-              patternValue.slice(patternValue.lastIndexOf("/") + 1)
-            )
-          : new RegExp(patternValue);
-
-      fieldSchema = (fieldSchema as z.ZodString).regex(
-        regexPattern,
-        field.validation?.pattern?.message ||
-          `Input does not match the required pattern: ${patternValue}`
-      );
+      const patternValue = String(field.validation.pattern.value).trim();
+      let regexPattern: RegExp;
+      try {
+        if (patternValue.startsWith("/") && patternValue.lastIndexOf("/") > 0) {
+          const lastSlashIndex = patternValue.lastIndexOf("/");
+          let patternBody = patternValue.slice(1, lastSlashIndex);
+          const flags = patternValue.slice(lastSlashIndex + 1);
+          patternBody = patternBody
+            .replace(/\\d/g, "\\d")
+            .replace(/\\s/g, "\\s");
+          regexPattern = new RegExp(patternBody, flags);
+        } else {
+          regexPattern = new RegExp(patternValue);
+        }
+        fieldSchema = (fieldSchema as z.ZodString).regex(
+          regexPattern,
+          field.validation.pattern.message ||
+            `Input does not match the required pattern`
+        );
+      } catch (error) {
+        console.error("Invalid regex pattern:", patternValue, error);
+      }
     }
 
     if (field.validation?.required?.value) {

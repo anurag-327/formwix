@@ -35,6 +35,7 @@ export default function RadioButtonField({
               <input
                 type="radio"
                 id={`${field.name}-${option.value}`}
+                disabled={field?.disabled}
                 value={option.value}
                 checked={value === option.value}
                 onChange={() => onChange(option.value)}

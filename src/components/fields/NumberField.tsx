@@ -23,6 +23,7 @@ export default function NumberField({
       render={({ field: { onChange, value } }) => (
         <input
           id={field.name}
+          disabled={field?.disabled}
           type="number"
           onChange={(e) => onChange(e.target.valueAsNumber)}
           value={value}

@@ -24,6 +24,7 @@ export default function URLField({
         <input
           type="url"
           onChange={onChange}
+          disabled={field?.disabled}
           value={value || ""}
           id={field.name}
           placeholder={field.placeholder ?? "Your Answer"}

@@ -26,6 +26,7 @@ export default function TelField({
         <input
           type="tel"
           id={field.name}
+          disabled={field?.disabled}
           onChange={onChange}
           value={value || ""}
           placeholder={field.placeholder ?? "Your Answer"}

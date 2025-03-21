@@ -24,6 +24,7 @@ export default function TextAreaField({
         <textarea
           onChange={onChange}
           value={value}
+          disabled={field?.disabled}
           rows={field.rows || 4}
           id={field.name}
           placeholder={field.placeholder ?? "Your Answer"}

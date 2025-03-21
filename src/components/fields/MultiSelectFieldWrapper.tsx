@@ -40,6 +40,7 @@ export default function MultiSelectField({
               <input
                 type="checkbox"
                 id={`${field.name}-${option.value}`}
+                disabled={field?.disabled}
                 checked={value.includes(option.value)}
                 onChange={(e) => {
                   const newValue = e.target.checked

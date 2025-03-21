@@ -35,6 +35,7 @@ export default function TimeField({
         return (
           <input
             id={field.name}
+            disabled={field?.disabled}
             className={clsx(
               theme?.time,
               field.theme?.time,

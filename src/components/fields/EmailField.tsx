@@ -23,6 +23,7 @@ export default function EmailField({
       render={({ field: { onChange, value } }) => (
         <input
           type={field.type}
+          disabled={field?.disabled}
           onChange={onChange}
           value={value}
           id={field.name}

@@ -28,6 +28,7 @@ export default function CheckBoxField({
           <input
             type="checkbox"
             id={field.name}
+            disabled={field?.disabled}
             checked={value || false}
             onChange={(e) => onChange(e.target.checked)}
             className={clsx(

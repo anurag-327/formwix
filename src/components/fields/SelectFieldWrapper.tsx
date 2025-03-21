@@ -32,6 +32,7 @@ export default function SelectField({
           <select
             onChange={onChange}
             value={value || ""}
+            disabled={field?.disabled}
             className={clsx(theme.select, field.theme?.select)}
           >
             {field.options.map((option) => (

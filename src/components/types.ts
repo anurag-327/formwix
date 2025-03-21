@@ -2,7 +2,7 @@ import { FieldValues, UseFormReset } from "react-hook-form";
 import { defaultTheme } from "./theme";
 
 export interface TypeGenericValidationRule {
-  value: number | string | RegExp | boolean;
+  value: number | string | boolean;
   message?: string;
 }
 
