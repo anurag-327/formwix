@@ -142,7 +142,7 @@ export interface TypeFormConfig {
   // eslint-disable-next-line no-unused-vars
   onSubmit: (data: TypeFormData, formUtils: TypeFormUtils) => void;
   defaultValues?: TypeFormData;
-  showFormReset?: boolean;
+  showFormResetButton?: boolean;
   resetButtonLabel?: string;
 }
 

@@ -158,7 +158,7 @@ export default function Formwix({
         ))}
       </div>
       <div className={styles.formActionWrapper}>
-        {config.showFormReset && (
+        {config.showFormResetButton && (
           <button
             type="button"
             onClick={() => resetForm()}
