@@ -90,14 +90,15 @@ Forms in Formwix are defined using a configuration object that specifies fields,
 
 #### TypeFormConfig
 
-| Property            | Type                        | Description                            |
-| ------------------- | --------------------------- | -------------------------------------- |
-| `fields`            | `TypeFieldConfig[]`         | Array of field configurations          |
-| `submitButtonLabel` | `string`                    | Label for the submit button            |
-| `onSubmit`          | `(data, formUtils) => void` | Function called when form is submitted |
-| `defaultValues`     | `TypeFormData`              | Default values for the form fields     |
-| `showFormReset`     | `boolean`                   | Whether to show a reset button         |
-| `resetButtonLabel`  | `string`                    | Label for the reset button             |
+| Property              | Type                        | Description                            |
+| --------------------- | --------------------------- | -------------------------------------- |
+| `fields`              | `TypeFieldConfig[]`         | Array of field configurations          |
+| `submitButtonLabel`   | `string`                    | Label for the submit button            |
+| `onSubmit`            | `(data, formUtils) => void` | Function called when form is submitted |
+| `defaultValues`       | `TypeFormData`              | Default values for the form fields     |
+| `showFormResetButton` | `boolean`                   | Whether to show a reset button         |
+| `resetButtonLabel`    | `string`                    | Label for the reset button             |
+| `validationMode`      | `string`                    | Defines the validation behaviour       |
 
 ### Field Configuration
 
@@ -391,9 +392,10 @@ Defines the overall form configuration.
 export interface TypeFormConfig {
   fields: TypeFieldConfig[];
   submitButtonLabel?: string;
+  validationMode?: "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all";
   onSubmit: (data: TypeFormData, formUtils: TypeFormUtils) => void;
   defaultValues?: TypeFormData;
-  showFormReset?: boolean;
+  showFormResetButton?: boolean;
   resetButtonLabel?: string;
 }
 ```
@@ -792,12 +794,17 @@ Below are examples of how to configure each supported field type in Formwix.
 
 **Solution**: Make sure you're calling the `reset()` function in your `onSubmit` handler.
 
-## Resources
+## Documentation
 
-For more detailed documentation and examples, visit the following resources:
+For more detailed documentation and examples, visit docs
+
+- [Documentation](https://formwix-docs.vercel.app/)
+
+## Resources
 
 - [GitHub Repository](https://github.com/anurag-327/formwix)
 - [Contribution Guidelines](https://github.com/anurag-327/formwix/blob/main/CONTRIBUTING.md)
+- [Documentation](https://formwix-docs.vercel.app/)
 
 ## Contributing
 
