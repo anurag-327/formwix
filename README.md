@@ -6,7 +6,7 @@
 
 # Formwix
 
-![Banner](https://github.com/user-attachments/assets/0be0e51c-6955-4c40-85b7-4f59d39a9dda)
+![Banner](https://github.com/user-attachments/assets/fab47f8e-4947-4de8-9317-cd2c826a9c90)
 
 > Dynamic form generation for React applications
 
