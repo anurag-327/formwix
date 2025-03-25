@@ -169,7 +169,7 @@ export default function Formwix({
         )}
         <button
           type="submit"
-          className={styles.submitButton}
+          className={clsx(styles.submitButton, !isValid && "disabled")}
           disabled={!isValid || isSubmitting}
         >
           {isSubmitting ? "Submitting" : config.submitButtonLabel || "Submit"}

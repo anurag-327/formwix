@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Formwix from "./Formwix";
-import { TypeFieldConfig, TypeFormData } from "../components/types";
+import {
+  TypeFieldConfig,
+  TypeFormConfig,
+  TypeFormData,
+} from "../components/types";
 
 export default {
   title: "Example/Formwix",
@@ -17,10 +21,6 @@ const fields: TypeFieldConfig[] = [
     placeholder: "Enter your username",
     validation: {
       required: { value: true, message: "Username is required" },
-      minLength: {
-        value: 3,
-        message: "Username must be at least 3 characters",
-      },
       maxLength: {
         value: 20,
         message: "Username must be at most 20 characters",
@@ -170,12 +170,11 @@ const fields: TypeFieldConfig[] = [
   },
 ];
 
-const formConfig = {
+const formConfig: TypeFormConfig = {
   onSubmit: (data: TypeFormData) => {
     console.log(data);
   },
   defaultValues: {
-    username: "john_doe",
     skills: ["js", "react"],
     acceptTerms: true,
     gender: "male",
@@ -186,6 +185,7 @@ const formConfig = {
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
   fields,
+  validationMode: "all",
 };
 export const DarkModeTest: Story = {
   args: {

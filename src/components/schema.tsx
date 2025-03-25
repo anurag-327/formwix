@@ -332,7 +332,21 @@ export const generateZodSchema = (
         fieldSchema = z.string(baseConfig);
     }
 
-    if (!validation?.required?.value) {
+    if (validation?.required?.value) {
+      fieldSchema = fieldSchema.refine(
+        (val) => {
+          if (Array.isArray(val)) return val.length > 0;
+          return (
+            val !== undefined && val !== null && val !== "" && val != false
+          );
+        },
+        {
+          message:
+            validation?.required?.message ||
+            createDefaultMessage(name, "required"),
+        },
+      );
+    } else {
       fieldSchema = fieldSchema.optional();
     }
 

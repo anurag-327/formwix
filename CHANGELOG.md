@@ -1,13 +1,20 @@
 # Changelog
 
-## [1.2.1] - 2026-03-26
+## [1.3.2] - 2026-03-26
+
+### ⚒️ Fixes
+
+- **Required Field Validation**
+  - Resolved an issue where required fields were not correctly validated across different input types.
+
+## [1.3.1] - 2026-03-26
 
 ### ✨ Styling fix
 
-- **Styling fix for password in darkmode**
-  - fixed dark mode issue in password field
+- **Dark Mode - Password Field**
+  - Fixed styling inconsistencies in the password field when using dark mode.
 
-## [1.2.0] - 2026-03-26
+## [1.3.0] - 2026-03-26
 
 ### ✨ Enhancements
 
