@@ -138,6 +138,7 @@ export type TypeSubmitButtonArgsConfig = {
 export interface TypeFormConfig {
   fields: TypeFieldConfig[];
   submitButtonLabel?: string;
+  validationMode?: "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all";
   // eslint-disable-next-line no-unused-vars
   onSubmit: (data: TypeFormData, formUtils: TypeFormUtils) => void;
   defaultValues?: TypeFormData;

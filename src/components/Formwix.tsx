@@ -2,7 +2,6 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import clsx from "clsx";
-
 import {
   TypeFormConfig,
   TypeFormData,
@@ -25,12 +24,13 @@ export default function Formwix({
     control,
     resetField,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isValid },
     getValues,
     setError,
   } = useForm({
     resolver: zodResolver(generateZodSchema(config.fields)),
     defaultValues: config.defaultValues ?? {},
+    mode: config.validationMode ?? "onChange",
   });
 
   function resetForm() {
@@ -170,7 +170,7 @@ export default function Formwix({
         <button
           type="submit"
           className={styles.submitButton}
-          disabled={isSubmitting}
+          disabled={!isValid || isSubmitting}
         >
           {isSubmitting ? "Submitting" : config.submitButtonLabel || "Submit"}
         </button>
