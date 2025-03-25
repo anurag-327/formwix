@@ -21,8 +21,10 @@
 .dark {
   --df-background-color: #1e1e1e;
   --df-label-color: #f5f5f5;
+  --df-padding: 8px 12px;
   --df-description-color: #bbb;
   --df-text-color: #e0e0e0;
+  --df-border: 1px solid #444;
   --df-border-color: #444;
   --df-focus-border-color: #3399ff;
   --df-error-color: #ff6b6b;
@@ -94,7 +96,10 @@
   border-radius: var(--df-border-radius);
   outline: none;
   transition: border-color 0.2s;
+  background: var(--df-background-color);
+  color: var(--df-text-color);
 }
+
 
 .df-text:focus,
 .df-email:focus,
@@ -123,10 +128,13 @@
   flex: 1;
   border: none;
   outline: none;
+  background: var(--df-background-color);
+  color: var(--df-text-color);
 }
 
 .df-password-eye-button-wrapper {
   color: var(--color-gray-400);
+  background: none;
 }
 
 .df-password-eye-button {
@@ -143,6 +151,7 @@
   padding: 4px;
   width: 100%;
   gap: var(--df-small-gap);
+  
 }
 
 .df-checkbox,
@@ -170,6 +179,7 @@
   flex-direction: row;
   align-items: center;
   gap: var(--df-small-gap);
+  color: var(--df-label-color);
 }
 
 .df-select {
