@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.0] – 2025-03-26
+## [1.1.0] – 2025-03-25
 
 ### ✨ Enhancements
 
@@ -12,6 +12,8 @@
   - Provides a smoother user experience by preventing invalid submissions.
 - **Improvements for consistency and clarity**
   - Rename showFormReset to showFormResetButton to improve clarity and avoid ambiguity, ensuring it explicitly indicates that it controls the visibility of the form reset button.
+- **Dark Mode**
+  - Added support of darkmode classes for form fields.
 
 ---
 
