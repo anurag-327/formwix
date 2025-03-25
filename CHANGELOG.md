@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1] - 2026-03-26
+
+### ✨ Styling fix
+
+- **Styling fix for password in darkmode**
+  - fixed dark mode issue in password field
+
 ## [1.2.0] - 2026-03-26
 
 ### ✨ Enhancements

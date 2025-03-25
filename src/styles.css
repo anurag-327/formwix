@@ -122,13 +122,14 @@
   padding: var(--df-padding);
   width: 100%;
   position: relative;
+  background: var(--df-background-color);
 }
 
 .df-password {
   flex: 1;
   border: none;
   outline: none;
-  background: var(--df-background-color);
+  background: inherit;
   color: var(--df-text-color);
 }
 
