@@ -4,6 +4,8 @@
 ![npm](https://img.shields.io/npm/dm/formwix)
 ![License](https://img.shields.io/npm/l/formwix)
 
+<a href="https://www.producthunt.com/posts/formwix?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-formwix" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=948989&theme=light&t=1743663282557" alt="Formwix - Configuration&#0045;based&#0032;form&#0032;builder&#0032;for&#0032;React&#0032;applications | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
 # Formwix
 
 ![Banner](https://github.com/user-attachments/assets/fab47f8e-4947-4de8-9317-cd2c826a9c90)
