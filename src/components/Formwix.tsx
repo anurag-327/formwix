@@ -27,6 +27,7 @@ export default function Formwix({
     formState: { errors, isSubmitting, isValid },
     getValues,
     setError,
+    reset,
   } = useForm({
     resolver: zodResolver(generateZodSchema(config.fields)),
     defaultValues: config.defaultValues ?? {},
@@ -88,6 +89,9 @@ export default function Formwix({
     config.onSubmit(data, { reset: resetForm });
   }
 
+  React.useEffect(() => {
+    reset(config.defaultValues ?? {});
+  }, [config?.defaultValues]);
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div className={styles.formContainer}>

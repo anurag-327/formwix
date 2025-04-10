@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3] - 2026-04-11
+
+### ⚒️ Fixes
+
+- **Form Reinitialization**
+  - Resolved an issue where form fields did not update when `defaultValues` were set asynchronously. The form now properly reinitializes using `reset()` when default values change.
+
 ## [1.3.2] - 2026-03-26
 
 ### ⚒️ Fixes

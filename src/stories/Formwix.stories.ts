@@ -5,6 +5,8 @@ import {
   TypeFormConfig,
   TypeFormData,
 } from "../components/types";
+import React, { useEffect } from "react";
+import { set } from "react-hook-form";
 
 export default {
   title: "Example/Formwix",
@@ -173,16 +175,6 @@ const fields: TypeFieldConfig[] = [
 const formConfig: TypeFormConfig = {
   onSubmit: (data: TypeFormData) => {
     console.log(data);
-  },
-  defaultValues: {
-    skills: ["js", "react"],
-    acceptTerms: true,
-    gender: "male",
-    country: "uk",
-    dob: "2000-01-01",
-    time: "12:00",
-    appointment: "2024-01-01T12:00",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   },
   fields,
   validationMode: "all",
