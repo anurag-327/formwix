@@ -1,6 +1,6 @@
 {
   "name": "formwix",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Config-based form rendering library",
   "type": "module",
   "module": "dist/formwix.es.js",
